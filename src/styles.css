@@ -2,3 +2,16 @@ nz-sider {
   min-height: calc(100vh - 64px);
 }
 
+.ant-layout-sider-zero-width-trigger {
+  position: fixed;
+  background-color: #cccccc;
+  color: #1890FF;
+  z-index: 100;
+  top: 100px;
+  left: 0px;
+  transition: background-color 300ms ease;
+}
+
+.ant-layout-sider-zero-width-trigger:hover {
+  background-color: #595959;
+}
