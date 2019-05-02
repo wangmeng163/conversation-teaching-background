@@ -1,0 +1,23 @@
+.student-entry {
+  border: 1px solid skyblue;
+  background-color: white;
+  border-radius: 8px;
+  color: black;
+  margin: 8px 8px 12px 8px;
+  padding: 8px;
+  line-height: 2em;
+  max-width: 800px;
+}
+
+.student-entry:hover {
+  cursor: pointer;
+  animation: myfirst 500ms;
+  box-shadow: 1px 1px 5px #1890FF, -1px -1px 5px #1890FF;
+}
+
+@keyframes myfirst
+{
+  from {box-shadow: 1px 1px 1px #1890FF, -1px -1px 1px #1890FF;}
+  to {box-shadow: 1px 1px 5px #1890FF, -1px -1px 5px #1890FF;}
+}
+

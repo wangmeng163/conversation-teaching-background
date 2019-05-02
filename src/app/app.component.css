@@ -1,0 +1,25 @@
+.logo {
+  width: 168px;
+  height: 31px;
+  background: yellowgreen;
+  margin: 16px 32px 16px 16px;
+  float: left;
+}
+
+nz-header {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.big-padding {
+  padding-left: 50px;
+}
+
+.small-padding {
+  padding-left: 10px;
+}
+
+nz-page-header {
+  border: 1px solid rgb(235, 237, 240);
+}
+

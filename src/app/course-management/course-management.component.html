@@ -1,0 +1,27 @@
+<nz-spin
+  *ngIf="isLoading"
+  style="text-align: center; margin: 32px;"
+  [nzIndicator]="indicatorTemplate"
+  nzSimple></nz-spin>
+<ng-template #indicatorTemplate><i nz-icon type="loading" style="font-size: 48px;"></i></ng-template>
+
+<nz-layout *ngIf="!isLoading">
+  <nz-layout>
+    <nz-content id="content" style="background:#fff; padding: 32px;">
+      <nz-list [nzDataSource]="data" [nzRenderItem]="entry" [nzGrid]="{ gutter: 16, xs: 24, sm: 12, md: 12, lg: 12, xl: 8 }">
+        <ng-template #entry let-item>
+          <nz-list-item class="course-entry" (click)="enterCourse(item.id)" [nzContent]="nzContent">
+            <ng-template #nzContent>
+              <nz-card class="card" [nzTitle]="item.id + ' ' + item.name">
+                {{ item.description }}
+              </nz-card>
+            </ng-template>
+          </nz-list-item>
+        </ng-template>
+      </nz-list>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
+<ng-template #zeroTrigger>
+  <i nz-icon type="menu-fold" nzTheme="outline"></i>
+</ng-template>

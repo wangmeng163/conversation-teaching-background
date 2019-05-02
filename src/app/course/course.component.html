@@ -1,0 +1,38 @@
+<nz-spin
+  *ngIf="isLoading"
+  style="text-align: center; margin: 32px;"
+  [nzIndicator]="indicatorTemplate"
+  nzSimple></nz-spin>
+<ng-template #indicatorTemplate><i nz-icon type="loading" style="font-size: 48px;"></i></ng-template>
+
+<nz-layout *ngIf="!isLoading">
+  <nz-sider
+    nzCollapsible
+    [(nzCollapsed)]="isCollapsed"
+    [nzBreakpoint]="'sm'"
+    [nzCollapsedWidth]="0"
+    [nzZeroTrigger]="zeroTrigger"
+  >
+    <ul nz-menu [nzMode]="'inline'" style="height:100%" [nzInlineCollapsed]="isCollapsed">
+      <li nz-menu-item nzSelected><a routerLink="/course/{{id}}/info"><i nz-icon type="info-circle"></i>基本信息</a></li>
+      <li nz-menu-item><a routerLink="/course/{{id}}/chapter"><i nz-icon type="profile"></i>所有章节</a></li>
+      <li nz-menu-item><a routerLink="/course/{{id}}/student"><i nz-icon type="team"></i>选课学生</a></li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-page-header
+      (nzBack)="0"
+      nzBackIcon
+      [nzTitle]="course.name"
+      nzSubtitle="课程管理 > {{ course.name }}：基本信息">
+    </nz-page-header>
+    <nz-content style="background:#fff; padding: 32px; min-height: 280px;">
+      <p><b>课程id：</b>{{course.id}}</p>
+      <p><b>课程描述：</b>{{course.description}}</p>
+      <p><b>选课人数：</b>{{course.select_num}}</p>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
+<ng-template #zeroTrigger>
+  <i nz-icon type="menu-fold" nzTheme="outline"></i>
+</ng-template>
