@@ -13,7 +13,19 @@
   </nz-sider>
   <nz-layout>
     <nz-content style="background:#fff; padding: 32px; min-height: 280px;">
-      <p>修改密码界面</p>
+      <div class="user-info">
+        <label class="user-info-label" for="oldPassword">旧密码: </label>
+        <input class="user-info-input" nz-input id="oldPassword" type="password" />
+      </div>
+      <div class="user-info">
+        <label class="user-info-label" for="newPassword1">新密码: </label>
+        <input class="user-info-input" nz-input id="newPassword1" type="password" />
+      </div>
+      <div class="user-info">
+        <label class="user-info-label" for="newPassword2">重复新密码: </label>
+        <input class="user-info-input" nz-input id="newPassword2" type="password" />
+      </div>
+      <button nz-button nzType="danger" style="margin-top: 30px"><i nz-icon nzType="reload" nzTheme="outline"></i>更改密码</button>
     </nz-content>
   </nz-layout>
 </nz-layout>

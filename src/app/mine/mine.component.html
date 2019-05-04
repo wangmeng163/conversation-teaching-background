@@ -20,7 +20,45 @@
   </nz-sider>
   <nz-layout>
     <nz-content style="background:#fff; padding: 32px; min-height: 280px;">
-      <p>我的基本信息</p>
+      <div>
+        <nz-avatar [nzShape]="'square'" [nzSize]="64" [nzIcon]="'user'"></nz-avatar>
+        <button nz-button [nzType]="'dashed'" style="margin-left: 16px; vertical-align: middle;">
+          <i nz-icon nzType="upload" nzTheme="outline"></i>更换
+        </button>
+      </div>
+      <div class="user-info">
+        <label class="user-info-label" for="id">ID: </label>
+        <input class="user-info-input" nz-input id="id" type="text" disabled [readOnly]="true" [value]="user.id" />
+      </div>
+      <div class="user-info">
+        <label class="user-info-label" for="name">姓名: </label>
+        <input class="user-info-input" nz-input id="name" type="text" [readOnly]="true" [value]="user.name" />
+        <button nz-button [nzType]="'dashed'" class="user-info-button">
+          <i nz-icon nzType="edit" nzTheme="outline"></i>编辑
+        </button>
+      </div>
+      <div class="user-info">
+        <label class="user-info-label" for="sex">性别: </label>
+        <input class="user-info-input" nz-input id="sex" type="text" [readOnly]="true" [value]="user.sex" />
+        <button nz-button [nzType]="'dashed'" class="user-info-button">
+          <i nz-icon nzType="edit" nzTheme="outline"></i>编辑
+        </button>
+      </div>
+      <div class="user-info">
+        <label class="user-info-label" for="org">机构: </label>
+        <input class="user-info-input" nz-input id="org" type="text" [readOnly]="true" [value]="user.organization" />
+        <button nz-button [nzType]="'dashed'" class="user-info-button">
+          <i nz-icon nzType="edit" nzTheme="outline"></i>编辑
+        </button>
+      </div>
+      <div class="user-info">
+        <label class="user-info-label" for="des">描述: </label>
+        <textarea class="user-info-textarea" nz-input id="des" [readOnly]="true" [value]="user.description"></textarea>
+        <button nz-button [nzType]="'dashed'" class="user-info-button">
+          <i nz-icon nzType="edit" nzTheme="outline"></i>编辑
+        </button>
+      </div>
+      <button nz-button nzType="primary" style="margin-top: 30px"><i nz-icon nzType="reload" nzTheme="outline"></i>应用更改</button>
     </nz-content>
   </nz-layout>
 </nz-layout>
